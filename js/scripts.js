@@ -21,3 +21,6 @@ function beepBoop(number) {
   }
   return outArray;
 }
+
+// UI
+
