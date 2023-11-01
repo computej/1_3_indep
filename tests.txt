@@ -3,3 +3,7 @@ Describe: beepBoop()
 Test: "It shuold return an array with the number 0 if the number 0 is inputted"
 Code: beepBoop(0)
 Expected Output: [ 0 ] 
+
+Test: "It should return an array with all of the integers between 0 and the user's input"
+Code: beepBoop(5)
+Expected Output: [ 0, 1, 2, 3, 4, 5 ]
