@@ -9,7 +9,29 @@
 </head>
 <body class="bg-body">
   <div class="container">
-    <div class="p-5 mt-5 bg-body-secondary text-light border border-secondary rounded">WIP</div>
+    <div class="row">
+      <div class="p-5 mt-5 bg-body-secondary text-light border border-secondary rounded">
+        <h1 class="m-2">WIP</h1>
+        <form id="beep-form">
+          <div class="row">
+            <label class="mb-2" for="beep-amount">Please enter an integer</label>
+            <div class="input-group">
+              <div class="col-3">
+                <input class="form-control form-control-sm" type="number" name="beep-amount" id="beep-amount">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="input-group">
+                <input class="btn btn-primary col-1" type="button" id="start-beep-btn" value="Start">
+              </div>
+            </div>
+          </div> 
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="p-5 bg-body-secondary text-light border border-secondary rounded">
+    </div>
   </div>
 </body>
 </html>
