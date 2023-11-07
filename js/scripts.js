@@ -48,6 +48,6 @@ window.addEventListener("load", function(event) {
     debugger;
     btnevent.preventDefault();
     const beepNumber = parseInt(document.getElementById("beep-amount").value);
-    if(beepNumber > 0) { showOutput(beepNumber); }
+    if(beepNumber >= 0) { showOutput(beepNumber); }
   });
 });
