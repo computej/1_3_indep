@@ -4,8 +4,8 @@ function beepBoop(number) {
   if(number === 0) {
     return [ 0 ];
   }
-  let outArray = new Array();
-  for(i = 0; i <= number; i++){
+  let outArray = [];
+  for(let i = 0; i <= number; i++){
     let j = i.toString();
     if(j.includes("3")) {
       j = "Won't you be my neighbor?";
@@ -26,7 +26,6 @@ function beepBoop(number) {
 function showOutput(number) {
   let beepArray = beepBoop(number);
   if (beepArray) {
-    //debugger;
     let outputList = document.querySelector("#output-box ul");
     if(outputList) { outputList.remove(); }
     let outputBox = document.querySelector("#output-box");
@@ -42,10 +41,9 @@ function showOutput(number) {
   }
 }
 
-window.addEventListener("load", function(event) {
+window.addEventListener("load", function() {
   let startButton = document.getElementById("start-beep-btn");
   startButton.addEventListener("click", function(btnevent) {
-    debugger;
     btnevent.preventDefault();
     const beepNumber = parseInt(document.getElementById("beep-amount").value);
     if(beepNumber >= 0) { showOutput(beepNumber); }
