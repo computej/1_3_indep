@@ -26,7 +26,7 @@ function beepBoop(number) {
 function showOutput(number) {
   let beepArray = beepBoop(number);
   if (beepArray) {
-    debugger;
+    //debugger;
     let outputBox = document.querySelector("#output-box");
     let ul = document.createElement("ul")
     beepArray.forEach(function(element, index) {
@@ -37,3 +37,15 @@ function showOutput(number) {
     outputBox.append(ul);
   }
 }
+
+window.addEventListener("load", function(event) {
+  let startButton = document.getElementById("start-beep-btn");
+  startButton.addEventListener("click", function(btnevent) {
+    debugger;
+    btnevent.preventDefault();
+    let outputList = document.querySelector("#output-box ul");
+    if(outputList) { outputList.remove(); }
+    const beepNumber = parseInt(document.getElementById("beep-amount").value);
+    if(beepNumber > 0) { showOutput(beepNumber); }
+  });
+});
