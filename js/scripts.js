@@ -1,6 +1,6 @@
 // Business
 
-function beepBoop(number) {
+function beepBoop(number, name) {
   if(number === 0) {
     return [ 0 ];
   }
@@ -8,7 +8,9 @@ function beepBoop(number) {
   for(let i = 0; i <= number; i++){
     let j = i.toString();
     if(j.includes("3")) {
-      j = "Won't you be my neighbor?";
+      j = "Won't you be my ";
+      const concatString = (name && name.length > 0)? "neighbor, ".concat(name.toString(),"?"): "neighbor?";
+      j = j.concat(concatString);
     }
     else if(j.includes("2")) {
       j = "Boop!";
@@ -23,8 +25,8 @@ function beepBoop(number) {
 
 // UI
 
-function showOutput(number) {
-  let beepArray = beepBoop(number);
+function showOutput(number, name) {
+  let beepArray = beepBoop(number, name);
   if (beepArray) {
     let outputList = document.querySelector("#output-box ul");
     if(outputList) { outputList.remove(); }
@@ -45,7 +47,9 @@ window.addEventListener("load", function() {
   let startButton = document.getElementById("start-beep-btn");
   startButton.addEventListener("click", function(btnevent) {
     btnevent.preventDefault();
+    debugger;
     const beepNumber = parseInt(document.getElementById("beep-amount").value);
-    if(beepNumber >= 0) { showOutput(beepNumber); }
+    const beepName = document.getElementById("beep-name").value.toString().trim();
+    if(beepNumber >= 0) { showOutput(beepNumber, beepName); }
   });
 });

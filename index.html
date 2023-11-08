@@ -10,14 +10,22 @@
 <body class="bg-body">
   <div class="container">
     <div class="row">
-      <div class="p-5 mt-5 bg-body-secondary text-light border border-secondary rounded">
+      <div class="p-5 mt-5 mb-5 bg-body-secondary text-light border border-secondary rounded">
         <h1 class="m-2">Mr. Roboger's Neighborhood</h1>
         <form id="beep-form">
           <div class="row">
-            <label class="mb-2" for="beep-amount">Please enter an integer</label>
+            <label class="mb-2" for="beep-amount">Please enter an integer:</label>
             <div class="input-group">
               <div class="col-3">
                 <input class="form-control form-control-sm" type="number" name="beep-amount" id="beep-amount">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <label class="mb-2" for="user-name">&lpar;Optional&rpar; Enter your name:</label>
+              <div class="input-group">
+                <div class="col-3">
+                  <input class="form-control form-control-sm" type="text" name="user-name" id="beep-name">
+                </div>
               </div>
             </div>
             <div class="row mt-2">
@@ -27,11 +35,13 @@
             </div>
           </div> 
         </form>
+        <hr>
+        <div class="text-light" id="output-box">
       </div>
     </div>
     <hr>
     <div class="row">
-      <div class="p-5 bg-body-secondary text-light border border-secondary rounded" id="output-box">
+      <div class="p-5 bg-body-secondary text-light border border-secondary rounded">
     </div>
     </div>
   </div>
