@@ -24,3 +24,11 @@ Test: "The 1 replacer shouldn't apply if the 2 replacer does, and the 2 replacer
 Code: beepBoop(13)
 Expected Output:
 [ 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?"]
+
+Test: "A second parameter takes a string. If defined,'Won't you be my neighbor?' becomes 'Won't you be my neighbor, (string)?"
+Code: beepBoop(3, "Jack");
+Expected Output: [ 0, "Beep!", "Boop!", "Won't you be my neighbor, Jack?"]
+
+Test: "If the string contains only whitespace, don't replace"
+Code: beepBoop(3, "    ");
+Expected Output: [ 0, "Beep!", "Boop!", "Won't you be my neighbor?"]
