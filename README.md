@@ -13,9 +13,9 @@ according to certain rules.
 
 ## Installation
 
-* If using a web browser, click the green button just above the file browser and click "Download .zip" from the dropdown.
-* Extract its contents to a new folder.
-* Open `index.html` with your browser
+1. If using a web browser, click the green button just above the file browser and click "Download .zip" from the dropdown.
+2. Extract its contents to a new folder.
+3. Open `index.html` with your browser
 
 ## Usage 
 
