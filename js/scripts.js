@@ -47,7 +47,6 @@ window.addEventListener("load", function() {
   let startButton = document.getElementById("start-beep-btn");
   startButton.addEventListener("click", function(btnevent) {
     btnevent.preventDefault();
-    debugger;
     const beepNumber = parseInt(document.getElementById("beep-amount").value);
     const beepName = document.getElementById("beep-name").value.toString().trim();
     if(beepNumber >= 0) { showOutput(beepNumber, beepName); }
