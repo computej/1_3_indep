@@ -20,7 +20,8 @@ according to certain rules.
 ## Usage 
 
 `index.html` contains two prompts for a integer and a string.
-Put a non-negative number into the 
+
+Put a non-negative number into the first prompt, optionally put any string into the second one, and click the blue "Next" button bellow them.
 
 ## Known Bugs
 
